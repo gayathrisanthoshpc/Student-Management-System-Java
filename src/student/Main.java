@@ -27,12 +27,27 @@ public class Main {
                 case 2:
 
                     dao.getAllStudents();
-                    
+
 
                 break;
                 case 3:
-                    // update student
-                    break;
+
+                    System.out.print("Enter Student ID to update: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Enter new name: ");
+                    String newName = sc.nextLine();
+
+                    System.out.print("Enter new email: ");
+                    String newEmail = sc.nextLine();
+
+                    System.out.print("Enter new age: ");
+                    int newAge = sc.nextInt();
+
+                    dao.updateStudent(id, newName, newEmail, newAge);
+
+                break;
                 case 4:
                     // delete student
                     break;
